@@ -4,6 +4,7 @@
 # Código principal transcrito de los Pasos 1 a 7 el 2026-11-12.
 # Nota: este .py incluye el código principal de limpieza, filtrado, agregación, unión y exportación.
 # No incluye salidas de celdas, celdas Markdown de instrucciones, visualizaciones ni el texto del resumen ejecutivo del notebook.
+# Adaptación para GitHub (2026-11-12): rutas relativas a datasets/ y display() cambiado a print() para que corra como script normal.
 
 # importar librerías
 import pandas as pd
@@ -12,8 +13,8 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 # cargar archivos
-traffic = pd.read_csv('/datasets/tomtom_traffic.csv')
-eco = pd.read_csv('/datasets/oecd_city_economy.csv')
+traffic = pd.read_csv('datasets/tomtom_traffic.csv')
+eco = pd.read_csv('datasets/oecd_city_economy.csv')
 
 # mostrar las primeras 5 filas (Nota: agregar .head() a la variable definida y visualizar con print())
 print(traffic.head())
@@ -97,8 +98,8 @@ traffic.head(3)
 traffic_2024=traffic[traffic['year']==2024].copy()
 eco_2024=eco[eco['year']==2024].copy()
 # Revisar dataframes nuevos
-display(traffic_2024.head())
-display(eco_2024.head())
+print(traffic_2024.head())
+print(eco_2024.head())
 
 # Calcular los  promedios de trafico por ciudad, país y año
 traffic_city_year_2024=(traffic_2024.groupby(['city','country','year'])[[

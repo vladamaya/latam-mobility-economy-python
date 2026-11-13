@@ -31,6 +31,15 @@ Ver [`proyecto5_limpieza_y_union.py`](./proyecto5_limpieza_y_union.py) — códi
 
 Nota: este repositorio incluye el código principal transcrito; no incluye las salidas de celdas, las visualizaciones ni el texto del resumen ejecutivo del notebook original, y los datos crudos del curso no se redistribuyen.
 
+## Cómo correrlo
+
+```bash
+pip install -r requirements.txt
+python proyecto5_limpieza_y_union.py
+```
+
+Coloca los archivos de entrada en una carpeta `datasets/` junto al script: `tomtom_traffic.csv` y `oecd_city_economy.csv` (son datos del entorno de práctica de TripleTen y no se redistribuyen). El script genera `ladb_mobility_economy_2024_clean.csv`.
+
 ## Autor
 
 Vlad — Analista de datos en formación (TripleTen).
